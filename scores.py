@@ -8,9 +8,7 @@ score = pd.read_csv('data.csv')
 
 #clean the data and sorting
 score = score.fillna(0)
-new_score = score.sort_values(["Names"],ascending=True) 
-#note: in the code above, i sorted the values because previously i used my friends' name 
-#but i changed it in the data.csv to anonymous names due to privacy
+new_score = score.sort_values(["Names"],ascending=True) #for unsorted data
 
 # Ensure Plus Point is numeric
 new_score['Plus Point'] = pd.to_numeric(new_score['Plus Point'], errors='coerce').fillna(0)
